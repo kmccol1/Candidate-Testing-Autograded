@@ -2,23 +2,21 @@
 //
 //
 //    Filename:    candidate-testing.js
-//    Date:        9 January 2024
+//    Date:        10 January 2024
 //    Author:      Kyle McColgan
-//    Description: This program provides a console-based quiz using javascript.
+//    Description: This program provides a console-based quiz using Javascript.
 //
 //
 //****************************************************************************************
 
 const input = require('readline-sync');
 
-// TODO 2: modify your quiz app to ask 5 questions //
+// TODO 2: modify your quiz app to ask 5 questions
 
-// TODO 1.1a: Define candidateName // 
+// TODO 1.1a: Define candidateName
 let candidateName = "";
-// TODO 1.2a: Define question, correctAnswer, and candidateAnswer //
-//let question = "What famous historical civil rights activist is quoted as having said that life's most 'persistent' and 'urgent' question is: 'What are you doing for others?'";
-//let correctAnswer = "MLK Jr.";
-//let candidateAnswer = "";
+// TODO 1.2a: Define question, correctAnswer, and candidateAnswer
+
 let question = "Who was the first American woman in space? ";
 let correctAnswer = "Sally Ride";
 let candidateAnswer = "";
@@ -32,36 +30,36 @@ let candidateAnswers;
 
 function askForName()
 {
-    // TODO 1.1b: Ask for candidate's name //
-    candidateName = input.question("Please enter your first name: ");
-    candidateAnswer = input.question(question);
+  // TODO 1.1b: Ask for candidate's name //
+  candidateName = input.question("Please enter your first name: ");
 }
 
 //****************************************************************************************
 
 function askQuestion()
 {
-  // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
+  // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer
+  candidateAnswer = input.question(question);
 }
 
 //****************************************************************************************
 
 function gradeQuiz(candidateAnswers)
 {
-    // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly
-    if (candidateAnswer == correctAnswer)
-    {
-        console.log("Correct!");
-    }
-    else
-    {
-       console.log("Incorrect!");
-    }
+  // TODO 1.2c: Let the candidate know if they have answered
+  if (candidateAnswer == correctAnswer)
+  {
+    console.log("Correct!");
+  }
+  else
+  {
+    console.log("Incorrect!");
+  }
 
   let grade;  //TODO 3.2 use this variable to calculate the candidates score.
 
-
   return grade;
+
 }
 
 //****************************************************************************************
