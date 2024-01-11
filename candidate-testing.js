@@ -69,9 +69,16 @@ function gradeQuiz(candidateAnswers)
 function runProgram() {
   askForName();
   // TODO 1.1c: Greet candidate using their name //
-   console.log("Greetings, ", candidateName);
+  console.log("Greetings, ", candidateName);
   askQuestion();
   gradeQuiz(this.candidateAnswers);
+}
+
+//****************************************************************************************
+
+if(require.main === module)
+{
+  runProgram();
 }
 
 //****************************************************************************************
