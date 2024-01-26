@@ -49,14 +49,16 @@ function askQuestion()
 
 function gradeQuiz(candidateAnswers)
 {
+    let numCorrect = 0;
     // TODO 1.2c: Let the candidate know if they have answered
     for (let i = 0; i < candidateAnswers.length; i ++)
     {
-        if (candidateAnswers[i] === correctAnswers[i])
+        if ( (candidateAnswers[i].toUpperCase()) == (correctAnswers[i].toUpperCase()))
         {
             console.log("\nCorrect!");
             console.log(`You answered: ${candidateAnswers[i]}`);
             console.log(`The correct answer was: ${correctAnswers[i]}`);
+            numCorrect += 1;
         }
         else
         {
@@ -67,6 +69,17 @@ function gradeQuiz(candidateAnswers)
     }
 
     let grade;  //TODO 3.2 use this variable to calculate the candidates score.
+
+    grade = (numCorrect / candidateAnswers.length) * 100;
+
+    if ( grade >= 80 )
+    {
+        console.log("Congratulations!");
+    }
+    else
+    {
+        console.log(`Maybe next time! You failed with a grade of ${grade}...`);
+    }
 
     return grade;
 }
